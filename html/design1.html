@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 255, 255);
+        }
+        .container{
+            height: 65%;
+            width: 70%;
+            background-color: lightblue;
+            display: flex;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 4px 4px 20px rgb(220, 220, 220);
+        }
+        .container .form-login{
+            height: 100%;
+            width: 50%;
+            background-color: rgb(255, 255, 255);
+        }
+        .container .form-content{
+            height: 100%;
+            width: 50%;
+            background-color: #065AD6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 25px;
+        }
+        .steper-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            color: white;
+        }
+        .steper-dot{
+            display: flex;
+            gap: 7px;
+            margin-top: 10px;
+        }
+        .dot{
+            height: 10px;
+            width: 10px;
+            background-color: white;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-login"></div>
+        <div class="form-content">
+            <div class="content-img">
+                <img src="../Screenshot 2026-01-27 111552.png" alt="">
+            </div>
+            <div class="steper-content">
+                <h3>Connect with every application.</h3>
+                <p>Everthing you need in an eassily customizable dashboard.</p>
+                <div class="steper-dot">
+                    <div class="dot"></div>
+                    <div class="dot" style="background-color: rgba(232, 232, 232, 0.478);"></div>
+                    <div class="dot" style="background-color: rgba(232, 232, 232, 0.478);"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

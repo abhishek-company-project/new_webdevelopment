@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            height: 450px;
+            width: 350px;
+            background-color: lightgray;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+        .card .images{
+            height: 40%;
+            width: 100%;
+            background-color: lightcoral
+        }
+        .offer{
+            background-color: lightseagreen;
+            color: white;
+            max-width: max-content;
+            position:absolute;
+            top: 10px;
+            left: 5px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="images"></div>
+        <div class="offer">
+            <h4>50% off</h4>
+        </div>
+        <h1>Hello user</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt amet saepe ut, ab necessitatibus vel assumenda? Nemo repellendus rem porro? Maiores, possimus? Rerum eaque odio fugiat obcaecati cumque voluptates libero!</p>
+        <button>Add to Card</button>
+    </div>
+    
+</body>
+</html>
