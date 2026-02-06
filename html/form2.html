@@ -1,0 +1,106 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/login" method="post">
+
+
+
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="username" autofocus pattern="[A-Za-z]{3}" placeholder="enter 3 char" ><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="surname" value="Doe" disabled>
+        <input type="text" size="4" maxlength="6" required>
+        <input type="number" max="10" step="2" min="0">
+        <input type="date">
+        <input type="file" multiple>
+
+        <select name="" id="">
+            <option value="">mp</option>
+            <option value="">up</option>
+            <option value="">ab</option>
+        </select>
+
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">female</label>
+        <input type="checkbox" id="term" checked>
+        <label for="term">i agree to your conditions</label>
+
+        <input list="browsers">
+  <datalist id="browsers">
+    <option value="Edge">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+
+
+
+
+  <fieldset>
+    <legend>Personalia:</legend>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+  <fieldset>
+    <legend>address:</legend>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+
+
+
+
+<label for="cars">Choose a car:</label>
+<select  name="cars" id="cars">
+  <optgroup label="Swedish Cars">
+    <option value="volvo" disabled>Volvo</option>
+    <option value="saab">Saab</option>
+  </optgroup>
+  <optgroup label="German Cars">
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+  </optgroup>
+</select>
+
+
+
+
+
+
+
+        <!-- <label for="name">Enter your name:</label>
+        <input type="text" id="name"><br>
+
+        <textarea id="" cols="5" rows="15"></textarea>
+
+        <label for="pass">enter your password:</label>
+        <input type="password" id="pass"> <br>
+        <label for="number">enter your number</label>
+        <input type="tel" id="number">
+        <input type="file">
+        <input type="datetime-local">
+        <input type="color">
+        <input type="checkbox">
+        <input type="radio">
+        <input type="range"> -->
+
+        <button type="submit">login</button>
+    </form>
+</body>
+
+</html>

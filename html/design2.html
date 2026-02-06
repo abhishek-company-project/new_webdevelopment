@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <style>
         * {
             margin: 0px;
@@ -26,49 +28,202 @@
             height: 80px;
             width: 100%;
             /* border: 2px solid rgb(103, 184, 176); */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        .logo-menu ul {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .navbar button {
+            padding: 5px 35px;
+            border-radius: 20px;
+            border: 2px solid gray;
+            background-color: transparent;
         }
 
         .hero {
             display: flex;
-            height: 100%;
-            padding: 0px 100px;
+            height: calc(100vh - 80px);
+            padding: 0px 200px;
+            align-items: center;
+            position: relative;
         }
 
         .assistant-content {
-            height: 100%;
+            height: 80%;
             width: 50%;
             /* border: 2px solid red; */
             padding: 25px 15px;
             display: flex;
             flex-direction: column;
             gap: 15px;
+
         }
-        .assistant-content p{
+
+        .assistant-content p {
             font-size: 20px;
         }
-        .assistant-content h1{
+
+        .assistant-content h1 {
             font-size: 65px;
-            width: 65%;
+            width: 80%;
+            line-height: 75px;
+        }
+
+        .assistant-content .search {
+            border: 1px solid rgb(180, 180, 180);
+            width: 40%;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            padding: 2px;
+        }
+
+        .assistant-content .search input {
+            width: 100%;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            padding: 8px 10px;
+            color: #3BA05D;
+        }
+
+        .search input::placeholder {
+            color: #3BA05D;
+        }
+
+        .search button {
+            padding: 0px 25px;
+            border: none;
+            border-radius: 20px;
+            background-color: #3BA05D;
+            color: white;
         }
 
         .assistant-details {
-            height: 100%;
+            height: 80%;
             width: 50%;
             /* border: 2px solid rgb(24, 124, 51); */
+            display: flex;
+            justify-content: start;
+            align-items: start;
+        }
+
+        .details-image {
+            height: 80%;
+            width: 60%;
+            border-radius: 25px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .assistant-details img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            
+        }
+
+        .assistant-details .details-cover {
+            height: 100%;
+            width: 100%;
+            background:linear-gradient(#3ba05d0d,#3ba05d88);
+            position: absolute;
+            top: 0px;
+            display: flex;
+            align-items: end;
+            padding: 20px;
+        }
+        .details-content{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 15px;
+        }
+        .details-content .dr{
+            height: 50px;
+            width: 250px;
+            background-color: white;
+            border-radius: 25px;
+            padding: 5px;
+        }
+        .details-content .arrow{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            border: 2px solid white;
+            padding: 5px;
+        }
+        .details-content .dot{
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        .assistant-report{
+            height: 300px;
+            width: 200px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            position: absolute;
+            left: 810px;
+            top: 250px;
+            z-index: 2;
+            box-shadow: 2px 2px 10px rgb(227, 227, 227);
         }
     </style>
 </head>
 
 <body>
     <div class="herosection">
-        <div class="navbar"></div>
+        <div class="navbar">
+            <div class="logo-menu">
+                <img src="" alt="">
+                <ul>
+                    <li>Home</li>
+                    <li>about</li>
+                    <li>contact</li>
+                    <li>service</li>
+                </ul>
+            </div>
+            <button>join us</button>
+        </div>
         <div class="hero">
             <div class="assistant-content">
                 <p style="color: #56c363;">nutrition assistant</p>
                 <h1>A Simplified Way to Start <span style="color: #3BA05D;">Losing Weight.</span></h1>
-                <p>Track your calories and protein intake with Nutrition Bot, That's it...</p>
+                <p style="width: 50%; color: rgb(164, 164, 164);">Track your calories and protein intake with Nutrition
+                    Bot, That's it...</p>
+                <div class="search">
+                    <input type="text" placeholder="hii Nutribot...">
+                    <button>Search</button>
+                </div>
             </div>
-            <div class="assistant-details"></div>
+
+            <div class="assistant-report">
+
+            </div>
+
+            <div class="assistant-details">
+                <div class="details-image">
+                    <img src="../images/new iamges.jpg" alt="">
+                    <div class="details-cover">
+                        <div class="details-content">
+                            <div class="dr"></div>
+                            <div class="arrow"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </div>
 </body>
