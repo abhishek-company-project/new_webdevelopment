@@ -1,0 +1,81 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+        .sidebar{
+            height: 100%;
+            width: 15%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .sidebar .logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            gap: 10px;
+        }
+        .logo-img{
+             height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            
+            background-color: rgb(233, 233, 233);
+            padding: 7px;
+        }
+        .sidebar .logo-img img{
+           
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .dashboard{
+            height: 100%;
+            width: 65%;
+            background-color: rgb(230, 230, 230);
+        }
+        .profile{
+            height: 100%;
+            width: 20%;
+            background-color: rgb(255, 255, 255);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="./hireism_logo-removebg-preview.png" alt="">
+                </div>
+                <h3>Hireism</h3>
+            </div>
+            <div class="menu"></div>
+            <div class="logout"></div>
+        </div>
+
+
+        <div class="dashboard">
+            
+        </div>
+
+
+        <div class="profile"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        input:hover{
+            color: red;
+        }
+        input:focus{
+            color: green;
+        }
+
+        a:link{
+            color: red;
+        }
+
+        a:visited{
+            color: green;
+        }
+
+        a:active{
+            color: blue;
+        }
+
+        h1{
+            opacity: 0.1;
+        }
+
+        /* li:nth-child(odd){
+            color: red;
+        }
+        li:nth-child(2n+1){
+            color: green;
+        } */
+       li:last-child{
+        color: red;
+       }
+       h1::first-letter{
+        color: red;
+        font-size: 150px;
+        text-transform: uppercase;
+       }
+
+       h1::selection{
+        background-color: green;
+       }
+       li::marker{
+        color: blue;
+        font-size: 25px;
+       }
+       
+    </style>
+</head>
+<body>
+    <h1>hello user</h1>
+   <input type="text">
+
+   <a href="https://www.facebook.com">facebook</a>
+   <a href="https://www.sage.com">sage</a>
+
+   <ul>
+    <li>Abhi</li>
+    <li>jay</li>
+    <li>ram</li>
+    <li>mohit</li>
+    <li>Abhi</li>
+    <li>jay</li>
+    <li>ram</li>
+    <li>mohit</li>
+    <li>Abhi</li>
+    <li>jay</li>
+    <li>ram</li>
+    <li>mohit</li>
+   </ul>
+
+</body>
+</html>

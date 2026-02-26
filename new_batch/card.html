@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            height: 400px;
+            width: 300px;
+            background-color: lightblue;
+            border-radius: 20px;
+            overflow: hidden;
+
+        }
+        .card-image{
+            height: 50%;
+            width: 100%;
+            background-color: lightcoral;
+            position: relative;
+        }
+        .card-image img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .tag{
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            border-radius:50%;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+        .card-image button{
+            display: block;
+            position: absolute;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-image">
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/r255pro_55d805bc-f2e1-4861-9533-8eee57081305.jpg?v=1682573437&width=200" alt="">
+            <div class="tag"></div>
+            <button>50 % offer</button>
+        </div>
+        <h1>hello</h1>
+    </div>
+</body>
+</html>

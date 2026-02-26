@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jumping Image Button</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+}
+
+/* Wrapper for positioning */
+.btn-wrapper {
+  position: relative;
+}
+
+/* Button Styling */
+.image-btn {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  background: #543636;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Jump animation */
+  animation: jump 1.5s infinite ease-in-out;
+}
+
+/* Image */
+.image-btn img {
+  width: 50px;
+  z-index: 2;
+}
+
+/* Background fill effect */
+.image-btn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 0%;
+  background: #4CAF50;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+/* Hover effect */
+.image-btn:hover::before {
+  width: 150%;
+  height: 150%;
+}
+
+/* Jump Keyframes */
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+  </style>
+</head>
+<body>
+
+<div class="btn-wrapper">
+  <button class="image-btn">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="icon">
+  </button>
+</div>
+
+</body>
+</html>

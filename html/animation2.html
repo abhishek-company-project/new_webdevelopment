@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attractive Toggle</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1f1f2e, #2c2c3c);
+  font-family: Arial, sans-serif;
+}
+
+/* Hide checkbox but keep functional */
+#toggle {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Toggle container */
+.toggle {
+  width: 140px;
+  height: 70px;
+  background: #2c2c3c;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s;
+
+  /* Inner shadow */
+  box-shadow:
+    inset 8px 8px 15px rgba(0,0,0,0.6),
+    inset -8px -8px 15px rgba(255,255,255,0.05);
+}
+
+/* Moving circle */
+.slider {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #444, #222);
+  transition: 0.4s;
+
+  box-shadow:
+    5px 5px 15px rgba(0,0,0,0.6),
+    -3px -3px 10px rgba(255,255,255,0.05);
+}
+
+/* ON state */
+#toggle:checked + .toggle {
+  background: linear-gradient(135deg, #00ff99, #00cc66);
+
+  box-shadow:
+    0 0 20px rgba(0,255,150,0.6),
+    
+}
+
+/* Move slider */
+#toggle:checked + .toggle .slider {
+  /* transform: translateX(70px); */
+  background: white;
+
+  box-shadow:
+    0 0 20px rgba(0,255,150,0.9);
+}
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <input type="checkbox" id="toggle">
+  <label for="toggle" class="toggle">
+    <span class="slider"></span>
+  </label>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100%;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 55px;
+            background-color: #F7F5FA;
+            flex-direction: column;
+            gap: 15px;
+            
+        }
+        .card{
+            height: 250px;
+            width: 100%;
+            background-color: white;
+            box-shadow: 2px 2px 10px rgb(245, 245, 245);
+            border-radius: 15px;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            /* justify-content: space-between; */
+            gap: 35px;
+        }
+        .card .card-img{
+            /* background-color: lightblue; */
+            height: 100%;
+            width:fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card-img .img-div{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: lightcoral;
+        }
+        .align-left{
+            text-align: end;
+        }
+        .name-timing{
+            color: #555ea2;
+        }
+        .time-track{
+            width: 80%;
+            height: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .track{
+            height: 2px;
+            width: 100%;
+            background-color: lightgray;
+        }
+        .primary-parent-dot{
+            height: 15px;
+            width: 15px;
+            background-color: #4a57b7;
+            border-radius: 50%;
+             display: flex;
+            justify-content: center;
+            align-items: center;
+             flex-shrink: 0;
+        }
+        .secondary-parent-dot{
+            height: 15px;
+            width: 15px;
+            background-color: #dadada;
+            border-radius: 50%;
+             display: flex;
+            justify-content: center;
+            align-items: center;
+             flex-shrink: 0;
+        }
+        
+        .primary-child-dot{
+            height: 7px;
+            width: 7px;
+            background-color: #555ea2;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .secondary-child-dot{
+            height: 7px;
+            width: 7px;
+            background-color: #fdfdfd;
+            border-radius: 50%;
+             flex-shrink: 0;
+        }
+        .card-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .card-btn button{
+            background-color: #F97A57;
+            color: white;
+            padding: 8px 50px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-img">
+                <div class="img-div"></div>
+                <!-- <div class="img-div"></div> -->
+            </div>
+
+            <div class="name-timing">
+                <h2>10:30AM</h2>
+                <h4>Barcelona(BCN)</h4>
+                <p>tuesday, Apr 21,2022</p>
+            </div>
+
+            <div class="time-track">
+                    <div class="primary-parent-dot">
+                        <div class="secondary-child-dot"></div>
+                    </div>
+                    <div class="track"></div>
+                     <div class="primary-child-dot"></div>
+                     <div class="track"></div>
+                     <div class="primary-child-dot"></div>
+                     <div class="track"></div>
+                    <div class="secondary-parent-dot">
+                        <div class="primary-child-dot"></div>
+                    </div>
+            </div>
+
+
+            <div class="name-timing align-left">
+                <h2>10:30AM</h2>
+                <h4>Barcelona(BCN)</h4>
+                <p>tuesday, Apr 21,2022</p>
+            </div>
+
+            <div class="card-btn">
+                <h1><span style="font-size: 15px;">$</span> 56 <span style="font-size: 15px;">USD</span></h1>
+                <button>Select</button>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mega Menu</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0b1020;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar{
+    background:linear-gradient(90deg,#0b1020,#0f1735);
+    padding:18px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#fff;
+    position:relative;
+}
+
+.nav-left{
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+
+.logo{
+    font-weight:700;
+    font-size:22px;
+    border:1px solid rgba(255,255,255,0.2);
+    padding:6px 14px;
+    border-radius:8px;
+}
+
+.logo span{
+    opacity:0.8;
+    font-weight:400;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    align-items:center;
+}
+
+.nav-links a{
+    color:#cfd6ff;
+    text-decoration:none;
+    font-size:15px;
+    position:relative;
+}
+
+.nav-links a:hover{
+    color:#fff;
+}
+
+/* RIGHT */
+.nav-right{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.btn{
+    background:#8b5cf6;
+    padding:10px 18px;
+    border-radius:20px;
+    font-weight:600;
+    text-decoration:none;
+    color:#fff;
+}
+
+/* ========================= */
+/* MEGA MENU */
+/* ========================= */
+
+.mega-wrapper{
+    position:absolute;
+    top:0px;
+    left:0;
+    width:1250px;
+    display:none;
+    padding:20px 50px;
+    background-color: transparent;
+}
+
+.nav-item{
+    position:relative;
+}
+
+.nav-item:hover .mega-wrapper{
+    display:block;
+}
+
+.mega-menu{
+    background:#f5f6fa;
+    border-radius:14px;
+    padding:30px;
+    display:flex;
+    gap:40px;
+    color: black;
+    box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* LEFT COLUMN */
+.menu-left{
+    width:250px;
+    border-right:1px solid #ddd;
+    padding-right:20px;
+}
+
+.menu-left h4{
+    font-size:14px;
+    letter-spacing:1px;
+    color:#7a7f9a;
+    margin-bottom:20px;
+}
+
+.menu-left ul{
+    list-style:none;
+}
+
+.menu-left li{
+    padding:12px 14px;
+    border-radius:8px;
+    font-weight:600;
+    margin-bottom:6px;
+    cursor:pointer;
+}
+
+.menu-left li:hover{
+    background:#e9e9ff;
+    color:#6b4cf6;
+}
+
+/* CENTER */
+.menu-center{
+    flex:1;
+}
+
+.menu-center h4{
+    font-size:14px;
+    letter-spacing:1px;
+    color:#7a7f9a;
+    margin-bottom:20px;
+}
+
+.cap-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px 40px;
+}
+
+.cap-item h5{
+    font-size:16px;
+    margin-bottom:6px;
+}
+
+.cap-item p{
+    font-size:14px;
+    color:#6b6f8d;
+}
+
+/* RIGHT SIDE */
+.menu-right{
+    width:260px;
+}
+
+.demo-box{
+    height:150px;
+    background:linear-gradient(135deg,#ff7ad9,#a855f7);
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.menu-right h5{
+    margin-bottom:6px;
+}
+
+.menu-right p{
+    font-size:14px;
+    color:#6b6f8d;
+    margin-bottom:8px;
+}
+
+.menu-right a{
+    font-size:14px;
+    font-weight:600;
+    text-decoration:none;
+    color:#000;
+    border-bottom:1px solid #000;
+}
+
+/* bottom buttons */
+.bottom-buttons{
+    margin-top:25px;
+    display:flex;
+    gap:20px;
+}
+
+.secondary-btn{
+    border:1px solid #ddd;
+    padding:10px 16px;
+    border-radius:25px;
+    background:#fff;
+    font-weight:600;
+    cursor:pointer;
+}
+.solution-content{
+    height: 350px;
+    width: 750px;
+    background-color: rgb(227, 227, 227);
+    position: absolute;
+    display: none;
+    border-radius: 15px;
+}
+.solution-item:hover .solution-content{
+    display: block;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="nav-left">
+        <div class="logo">teamwork<span>.com</span></div>
+
+        <div class="nav-links">
+            <div class="nav-item">
+                <a href="#">Product ▾</a>
+
+                <!-- MEGA MENU -->
+                <div class="mega-wrapper">
+                    <div class="mega-menu">
+
+                        <!-- LEFT -->
+                        <div class="menu-left">
+                            <h4>PRODUCT</h4>
+                            <ul>
+                                <li>Manage projects</li>
+                                <li>Resource and report</li>
+                                <li>Improve profitability</li>
+                                <li>Integrate your apps</li>
+                            </ul>
+                        </div>
+
+                        <!-- CENTER -->
+                        <div class="menu-center">
+                            <h4>CAPABILITIES</h4>
+                            <div class="cap-grid">
+                                <div class="cap-item">
+                                    <h5>Manage clients</h5>
+                                    <p>Get visibility of all client projects</p>
+                                </div>
+                                <div class="cap-item">
+                                    <h5>Unify projects and tickets</h5>
+                                    <p>Turn tickets into tasks</p>
+                                </div>
+                                <div class="cap-item">
+                                    <h5>Take in client work</h5>
+                                    <p>Gather requests with forms</p>
+                                </div>
+                                <div class="cap-item">
+                                    <h5>Reduce repetitive work</h5>
+                                    <p>Automations. Less manual work</p>
+                                </div>
+                                <div class="cap-item">
+                                    <h5>Manage projects</h5>
+                                    <p>Deliver projects faster</p>
+                                </div>
+                                <div class="cap-item">
+                                    <h5>Get client feedback</h5>
+                                    <p>Gather feedback with proofs</p>
+                                </div>
+                            </div>
+
+                            <div class="bottom-buttons">
+                                <div class="secondary-btn">Book your demo</div>
+                                <div class="secondary-btn">Start your free trial</div>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT -->
+                        <div class="menu-right">
+                            <div class="demo-box"></div>
+                            <h5>Take a tour</h5>
+                            <p>See how easy client work can be with Teamwork</p>
+                            <a href="#">See how it works</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="solution-item">
+                <a href="#">Solutions ▾</a>
+                <div class="solution-content">
+
+                </div>
+            </div>
+            <a href="#">Why Teamwork.com ▾</a>
+            <a href="#">Resources ▾</a>
+            <a href="#">Pricing</a>
+            <a href="#">✨ TeamworkAI</a>
+        </div>
+    </div>
+
+    <div class="nav-right">
+        <a href="#" style="color:#cfd6ff;text-decoration:none;">Contact Sales</a>
+        <a href="#" style="color:#cfd6ff;text-decoration:none;">Log in</a>
+        <a href="#" class="btn">Try for free</a>
+    </div>
+</nav>
+
+<h1>Hello user</h1>
+
+</body>
+</html>

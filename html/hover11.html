@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources Mega Menu - No JS</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0b1020;
+}
+
+/* NAVBAR */
+.navbar{
+    background:linear-gradient(90deg,#0b1020,#0f1735);
+    padding:18px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    color:#fff;
+}
+
+/* LINKS */
+.nav-links{
+    display:flex;
+    gap:30px;
+    align-items:center;
+}
+
+.nav-item{
+    position:relative;
+}
+
+.nav-links a{
+    color:#cfd6ff;
+    text-decoration:none;
+    font-size:15px;
+}
+
+.nav-links a:hover{
+    color:#fff;
+}
+
+/* RIGHT SIDE */
+.nav-right{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.btn{
+    background:#8b5cf6;
+    padding:10px 18px;
+    border-radius:20px;
+    font-weight:600;
+    text-decoration:none;
+    color:#fff;
+}
+
+/* ======================= */
+/* MEGA MENU */
+/* ======================= */
+
+.mega-wrapper{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:1250px;
+    padding:20px 50px;
+    display:none;
+    color: black;
+    background-color: white;
+}
+
+/* Show on click using focus-within */
+.nav-item:focus-within .mega-wrapper{
+    display:block;
+}
+
+.mega-menu{
+    background:#f5f6fa;
+    border-radius:14px;
+    padding:35px;
+    display:flex;
+    gap:40px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* COLUMNS */
+.column{
+    flex:1;
+}
+
+.column h4{
+    font-size:14px;
+    letter-spacing:1px;
+    color:#7a7f9a;
+    margin-bottom:20px;
+}
+
+.column ul{
+    list-style:none;
+}
+
+.column li{
+    margin-bottom:14px;
+    font-weight:500;
+    cursor:pointer;
+}
+
+.column li:hover{
+    color:#6b4cf6;
+}
+
+/* FEATURED */
+.featured{
+    width:280px;
+}
+
+.feature-box{
+    height:150px;
+    background:linear-gradient(135deg,#ff7ad9,#a855f7);
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.featured h5{
+    margin-bottom:6px;
+}
+
+.featured p{
+    font-size:14px;
+    color:#6b6f8d;
+    margin-bottom:10px;
+}
+
+.featured a{
+    font-size:14px;
+    font-weight:600;
+    text-decoration:none;
+    border-bottom:1px solid #000;
+    color:#000;
+}
+
+/* bottom buttons */
+.bottom-buttons{
+    margin-top:25px;
+    display:flex;
+    gap:20px;
+}
+
+.secondary-btn{
+    border:1px solid #ddd;
+    padding:10px 16px;
+    border-radius:25px;
+    background:#fff;
+    font-weight:600;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="nav-links">
+        <a href="#">Product</a>
+        <a href="#">Solutions</a>
+
+        <!-- CLICKABLE ITEM -->
+        <div class="nav-item">
+            <a href="#" >Resources ▾</a>
+
+            <div class="mega-wrapper">
+                <div class="mega-menu">
+
+                    <div class="column">
+                        <h4>GET STARTED</h4>
+                        <ul>
+                            <li>Access free templates</li>
+                            <li>Connect all your apps</li>
+                            <li>Expert help to set up fast</li>
+                            <li>Get started with Academy</li>
+                            <li>Support center</li>
+                            <li>Find a partner</li>
+                        </ul>
+                    </div>
+
+                    <div class="column">
+                        <h4>KNOWLEDGE HUBS</h4>
+                        <ul>
+                            <li>Resource management Hub</li>
+                            <li>Client Hub</li>
+                            <li>Profitability Hub</li>
+                            <li>Time tracking Hub</li>
+                            <li>Agile Hub</li>
+                        </ul>
+                    </div>
+
+                    <div class="column">
+                        <h4>DISCOVER</h4>
+                        <ul>
+                            <li>Discover customer stories</li>
+                            <li>Read our Blog</li>
+                            <li>Visit Agency Life</li>
+                            <li>Join free webinars</li>
+                            <li>Project management guide</li>
+                            <li>Browse all resources</li>
+                        </ul>
+                    </div>
+
+                    <div class="featured">
+                        <h4>FEATURED</h4>
+                        <div class="feature-box"></div>
+                        <h5>The Sprint to AI</h5>
+                        <p>Teams rush to adopt AI but bloated stacks hinder success.</p>
+                        <a href="#">Read the report</a>
+                    </div>
+
+                </div>
+
+                <div class="bottom-buttons">
+                    <div class="secondary-btn">Book your demo</div>
+                    <div class="secondary-btn">Start your free trial</div>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="#">Pricing</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="#" style="color:#cfd6ff;text-decoration:none;">Contact Sales</a>
+        <a href="#" style="color:#cfd6ff;text-decoration:none;">Log in</a>
+        <a href="#" class="btn">Try for free</a>
+    </div>
+
+</nav>
+
+</body>
+</html>
