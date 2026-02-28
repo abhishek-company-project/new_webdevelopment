@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        
+        .container{
+            height: 100%;
+            width: 100%;
+            background-color: lightblue;
+            font-size: 20px;
+        }
+        .container h1{
+            font-size: 2em;
+        }
+        .container p{
+            font-size: 1.1em;
+        }
+        .container button{
+            font-size: 1.2em;
+        }
+
+        @media (max-width:1000px){
+            .container{
+                font-size: 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello user</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, inventore? Eius dolorem assumenda necessitatibus velit. Non esse, quis eos, nobis at asperiores aliquam vitae ipsam adipisci corporis excepturi ex nam!</p>
+        <button>login</button>
+    </div>
+</body>
+</html>
