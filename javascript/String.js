@@ -87,3 +87,57 @@ var str="abhishek";
 // }
 
 // console.log(result)
+
+
+// str="abhishek"
+// result=""
+// // kehsihba
+// // for(var i=str.length-1;i>=0;i--){
+// //     result+=str[i]
+// // }
+// for(var i=0;i<str.length;i++){
+//     result=str[i]+result
+// }
+// console.log(result)
+
+// var num=458;
+
+
+// while(num>0){
+//     var digit=num%10;
+//     console.log(digit)
+//        num=parseInt(num/10)
+// }
+
+
+
+
+
+
+
+// var i=3;
+// while(i<=6){
+//     if(i%2==0){
+//         console.log(i-2)
+//         i++;
+//     }
+//     else{
+//         console.log(i)
+//     }
+//     i++;
+// }
+
+// var i=4;
+// do{
+//     console.log("hello")
+//     i++;
+// }while(i<=3)
+
+
+// for(var i=0;i<9;i++){
+//     if(i==5){
+//         continue;
+//     }
+//     console.log(i)
+//     console.log("hiii")
+// }
