@@ -1,37 +1,37 @@
 
-var person = {
-    name: "abhi",
-    age: 23,
-    surname: "gurjar",
-    skills: ["html", "css", "js"],
-    address: {
-        city: "indore",
-        state: "mp",
-        pincode: "452021",
-        houseNo: "48 sec-c"
+// var person = {
+//     name: "abhi",
+//     age: 23,
+//     surname: "gurjar",
+//     skills: ["html", "css", "js"],
+//     address: {
+//         city: "indore",
+//         state: "mp",
+//         pincode: "452021",
+//         houseNo: "48 sec-c"
 
-    },
-    college: "lncts",
-    getAllDetails: function () {
-        return `my name is ${this.name} ${this.surname} . i am old ${this.age}`
-    },
-    getAllSkills: function () {
-        for (var i = 0; i < this.skills.length; i++) {
-            console.log(this.skills[i])
-        }
-    },
-    changeName:function(name,surname){
-        this.name=name,
-        this.surname=surname,
-        console.log("name updated")
-    }
+//     },
+//     college: "lncts",
+//     getAllDetails: function () {
+//         return `my name is ${this.name} ${this.surname} . i am old ${this.age}`
+//     },
+//     getAllSkills: function () {
+//         for (var i = 0; i < this.skills.length; i++) {
+//             console.log(this.skills[i])
+//         }
+//     },
+//     changeName:function(name,surname){
+//         this.name=name,
+//         this.surname=surname,
+//         console.log("name updated")
+//     }
 
-}
+// }
 
-console.log(person.getAllDetails())
-person.getAllSkills()
-person.changeName("aman","sharma")
-console.log(person.getAllDetails())
+// console.log(person.getAllDetails())
+// person.getAllSkills()
+// person.changeName("aman","sharma")
+// console.log(person.getAllDetails())
 
 // console.log(person["age"])
 // console.log(person.address.city)
