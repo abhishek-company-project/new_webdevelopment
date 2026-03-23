@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact List UI</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        background: #fff;
+        width: 400px;
+        padding: 25px;
+        border-radius: 16px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    /* Inputs */
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    input:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 5px rgba(102,126,234,0.4);
+    }
+
+    .add-btn {
+        width: 100%;
+        padding: 10px;
+        background: #667eea;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-top: 10px;
+        transition: 0.3s;
+    }
+
+    .add-btn:hover {
+        background: #5a67d8;
+    }
+
+    /* Contact List */
+    .contact-list {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .contact {
+        background: #f7f9fc;
+        padding: 12px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .number {
+        font-size: 14px;
+        color: #777;
+    }
+
+    /* Buttons */
+    .actions {
+        display: flex;
+        gap: 6px;
+    }
+
+    .btn {
+        padding: 6px 10px;
+        border: none;
+        border-radius: 6px;
+        font-size: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .delete {
+        background: #ff4d4d;
+        color: white;
+    }
+
+    .delete:hover {
+        background: #e63939;
+    }
+
+    .active {
+        background: #28c76f;
+        color: white;
+    }
+
+    .inactive {
+        background: #999;
+        color: white;
+    }
+
+    .btn:hover {
+        opacity: 0.85;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Contact List</h2>
+
+    <!-- Inputs -->
+    <div class="form-group">
+        <input type="text" placeholder="Enter Name">
+    </div>
+
+    <div class="form-group">
+        <input type="text" placeholder="Enter Number">
+    </div>
+
+    <button class="add-btn">+ Add Contact</button>
+
+    <!-- Contact List -->
+    <div class="contact-list">
+
+        <div class="contact">
+            <div class="info">
+                <span class="name">John Doe</span>
+                <span class="number">+1 234 567 890</span>
+            </div>
+            <div class="actions">
+                <button class="btn active">Active</button>
+                <button class="btn delete">Delete</button>
+            </div>
+        </div>
+
+        <div class="contact">
+            <div class="info">
+                <span class="name">Sarah Smith</span>
+                <span class="number">+44 987 654 321</span>
+            </div>
+            <div class="actions">
+                <button class="btn inactive">Inactive</button>
+                <button class="btn delete">Delete</button>
+            </div>
+        </div>
+
+        <div class="contact">
+            <div class="info">
+                <span class="name">Alex Johnson</span>
+                <span class="number">+91 90000 12345</span>
+            </div>
+            <div class="actions">
+                <button class="btn active">Active</button>
+                <button class="btn delete">Delete</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

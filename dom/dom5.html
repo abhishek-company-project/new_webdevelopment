@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading{
+            background-color: teal;
+            color: white;
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin: 15px;
+            text-align: center;
+        }
+        .heading:hover{
+            background-color: rgb(0, 145, 145);
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        img{
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            border: 2px solid teal;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hello my name is abhi</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-e73lHSywvwHbtQulEd1uIwl40tbvVkJwjQ&s" alt="">
+    <button>change style</button>
+    
+
+    <script>
+        var btn=document.querySelector("button")
+        var h1=document.querySelector("h1")
+        var img=document.querySelector("img")
+        btn.addEventListener("click",function(){
+            h1.setAttribute("class","heading")
+            img.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzI2tfqwpfDKS4WkRMMQSI4nAZjk3BqxSsvQ&s")
+        })
+    </script>
+    
+</body>
+</html>

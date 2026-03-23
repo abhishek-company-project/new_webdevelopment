@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul>
+        <li>Aman</li>
+        <li>riya</li>
+        <li>jay</li>
+        <li>sakshi</li>
+    </ul>
+
+    <h1>Add new name in list:</h1>
+    <input type="text" class="nameinput">
+    <button id="addbtn">Add Name</button>
+    <input type="text" class="indexinput">
+    <button id="colorbtn">change color</button>
+
+    <script>
+        var list=document.querySelector("ul")
+        var nameinput=document.querySelector(".nameinput")
+        var addbtn=document.querySelector("#addbtn")
+        
+        addbtn.addEventListener("click",function(){
+            var value=nameinput.value;
+            var li=document.createElement("li")
+            li.innerText=value;
+            console.log(li)
+            list.append(li)
+        })
+        
+        var colorbtn=document.querySelector("#colorbtn")
+        var indexinput=document.querySelector(".indexinput")
+
+        colorbtn.addEventListener("click",function(){
+            var indexvalue=indexinput.value;
+            var list=document.querySelectorAll("ul li");
+
+            for(var i=0;i<list.length;i++){
+                if(i==indexvalue-1){
+                    console.log(i)
+                    console.log(indexvalue)
+                    list[i].style.color="red"
+                }
+            }
+        })
+
+    </script>
+    
+</body>
+</html>
