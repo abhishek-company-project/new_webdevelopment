@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.heading{
+    background-color: lightgray;
+    padding: 5px 15px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+        .active{
+            background-color: rgb(175, 224, 175);
+            color: rgb(4, 89, 4);
+        }
+        .inactive{
+            background-color: rgb(224, 175, 175);
+            color: rgb(89, 4, 4);
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="heading">Hello Abhi</h1>
+    <button>click</button>
+
+    
+    <script>
+        var btn=document.querySelector("button")
+        btn.addEventListener("click",function(){
+            var h1=document.querySelector("h1")
+
+            // if(h1.classList.value.includes("inactive")){
+            //     h1.classList.add("active")
+            //     h1.classList.remove("inactive")
+            // }
+            // else{
+            //      h1.classList.add("inactive")
+            //     h1.classList.remove("active")
+            // }
+
+            h1.classList.toggle("active")
+
+
+
+            // h1.setAttribute("class","active")
+            // h1.classList.add("active")
+            // h1.classList.remove("inactive")
+            // var arr=h1.classList.value
+            // console.log(arr.includes("inactive"))
+
+        })
+
+
+    </script>
+    
+</body>
+</html>

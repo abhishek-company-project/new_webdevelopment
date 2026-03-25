@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Cards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .form {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .form input {
+      padding: 10px;
+      flex: 1;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .form button {
+      padding: 10px 20px;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+    }
+
+    .card p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Cards</h2>
+
+    <div class="form">
+      <input type="text" id="name" placeholder="Name" />
+      <input type="number" id="age" placeholder="Age" />
+      <input type="text" id="course" placeholder="Course" />
+      <button onclick="addStudent()">Add</button>
+    </div>
+
+    <div class="cards" id="cardContainer">
+        <!-- <div class="card">
+            <h3>Name:abhishek</h3>
+            <p>age: 25</p>
+            <p>course : b.tech</p>
+        </div> -->
+    </div>
+  </div>
+
+  <script>
+    const students = [{name:"abhishek",age:23,course:"b.tech"}];
+
+    function addStudent() {
+      const name = document.getElementById('name').value;
+      const age = document.getElementById('age').value;
+      const course = document.getElementById('course').value;
+
+      if (!name || !age || !course) {
+        alert('Please fill all fields');
+        return;
+      }
+
+      const student = {
+        name: name,
+        age: age,
+        course: course
+      };
+
+      students.push(student);
+
+      renderCards();
+
+      document.getElementById('name').value = '';
+      document.getElementById('age').value = '';
+      document.getElementById('course').value = '';
+    }
+renderCards();
+    function renderCards() {
+      const container = document.getElementById('cardContainer');
+      container.innerHTML = '';
+
+      students.forEach(function(student, index) {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        card.innerHTML = `
+          <h3>${student.name}</h3>
+          <p><strong>Age:</strong> ${student.age}</p>
+          <p><strong>Course:</strong> ${student.course}</p>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>

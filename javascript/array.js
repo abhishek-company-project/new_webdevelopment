@@ -113,3 +113,14 @@
 
 // // console.log(fruits.indexOf("Apple"))
 // console.log(fruits.includes("kiiw"))
+
+
+var arr=[12,232,123,12,23];
+
+// for(var i=0;i<arr.length;i++){
+//     console.log(arr[i])
+// }
+
+arr.forEach(function(element,index){
+    console.log(element,index)
+})
